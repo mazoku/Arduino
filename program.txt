@@ -1,0 +1,30 @@
+
+1. DEN
+  (1) Rozjet robota
+  (2) Metody pro pohyb - dopredu, dozadu, doleva, doprava, zastavit
+  (3) Jet s robotem rovne a zastavit se na nejake znacce (znama vzdalenost)
+    (a) zrychlovani a zpomalovani (pres for cyklus)
+  (4) Dojet s robotem na jinou znacku (napr. 2x vetsi vzdalenost)
+  (5) Bludiste s jednou zatackou (zname vzdalenosti)
+  (6) Bludiste se dvemi zatackami (zname vzdalenost)
+  (7) Dojet s robotem na znacku, otocit se o 180° a vratit se na start
+    - dopsat metodu otocit vlevo/vpravo (na miste)
+
+2. DEN
+  (1) Pripojit zvukove efekty
+  (2) Pripojit svetelne efekty
+  
+  
+IDEAS
+  (*) Naprogramovat robota tak, aby zustal v urcite oblasti, tzn. pri najeti na caru se otocil a pokracoval jinym smerem
+    - priklad je v File > Examples > ZumoExamples > BorderDetect
+    - mozna by takto slo udelat i bludiste
+  (*) Detekce narazu
+    - pri detekovani narazu zapipat
+    - vyhybani se prekazkam - pri detekci narazu se otocit a pokracovat jinym smerem
+  (*) Kompas?
+  (*) Pripojit US sensor
+    - merit vzdalenost
+    - drzet si urcity odstup od prekazky
+  (*) Pripojit servo?
+    - pozor na konflikt s timerem, reseni viz https://www.pololu.com/docs/0J57/8

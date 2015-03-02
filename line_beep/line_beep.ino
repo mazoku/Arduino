@@ -11,7 +11,8 @@ ZumoBuzzer buzzer;
 Pushbutton button(ZUMO_BUTTON);
 
 ZumoReflectanceSensorArray sensors(QTR_NO_EMITTER_PIN);
-unsigned int sensor_values[6];
+#define N_SENSORS 6
+unsigned int sensor_values[N_SENSORS];
 
 //------------------------------------------------------------------
 void setup(){
@@ -44,8 +45,14 @@ void loop(){
 
 //-----------------------------------------------------------------
 boolean contact_made(){
-  boolean contactL = sensor_values[0] > QTR_THRESHOLD;
-  boolean contactR = sensor_values[5] > QTR_THRESHOLD;
+  boolean contact = false;
   
-  return(contactL && contactR);
+  for(int i = 0; i < N_SENSORS; i++){
+    if(sensor_values[i] > QTR_THRESHOLD){
+      contact = true;
+      break;
+    }
+  }
+  
+  return(contact);
 }
